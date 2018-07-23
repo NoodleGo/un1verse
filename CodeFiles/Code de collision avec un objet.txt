@@ -1,0 +1,23 @@
+///Horizontal collision with block 1//
+if (place_meeting(x + hsp,y,obj_tile_collision))
+{
+	while (!place_meeting(x + sign(hsp),y,obj_tile_collision))
+	{
+		x = x + sign(hsp);
+	}
+	hsp = 0;
+	
+}
+x = x + hsp;
+
+///Vertical collision with block 1//
+if (place_meeting(x,y + vsp,obj_tile_collision))
+{
+	while (!place_meeting(x,y + sign(vsp),obj_tile_collision))
+	{
+		y = y + sign(vsp);
+	}
+	vsp = 0;
+	
+}
+y = y + vsp;
